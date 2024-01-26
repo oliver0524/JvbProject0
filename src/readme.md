@@ -1,4 +1,4 @@
-# This application is called Hotel Service and designed for collecting hotel information such as 
+# This application is called the Hotel Service and designed for collecting hotel information such as 
 # hotel name, hotel features and price per night.
 
 # Main functionality
@@ -11,9 +11,9 @@
   - **Exit** (exit from the application)
 
 # JUnit
- - Arrange (set up a testing scenario, eg a certain set of inputs to a method)
- - Act (execute the code we intend to test)
- - Assert (ensure that the code behaved / returned as expected)
+ - Several testing scenarios are set up to test the app functionality:
+   - Verify that hotel service is empty when first created
+   - The happy path (Test if the "happy path" is working and not throwing exceptions)
 
 # Logging
 - Results of the main actions are logged in the logfile.log with the append flag turned on.

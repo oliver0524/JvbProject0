@@ -134,3 +134,5 @@ INFO	2024-01-26 09:49:52,872	20	org.example.Main	[main]	Caught HotelInfoExceptio
 INFO	2024-01-26 09:49:52,873	21	org.example.Main	[main]	Attempting to add a hotel., features, 1.0
 WARN	2024-01-26 09:49:52,873	21	org.example.Main	[main]	Hotel name is missing: 
 INFO	2024-01-26 09:49:52,873	21	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank
+INFO	2024-01-26 10:40:52,804	0	org.example.Main	[main]	Attempting to add a hotel., , 0.0
+WARN	2024-01-26 10:40:52,805	1	org.example.Main	[main]	Price cannnot be 0 or less: 0.0

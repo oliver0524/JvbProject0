@@ -44,7 +44,7 @@ public class CLIParser {
         String hotelName = sc.nextLine();
         System.out.println("* Input hotel features");
         String hotelFeatures = sc.nextLine();
-        System.out.println("* Input a price per night (must be a number)");
+        System.out.println("* Input a price per night (must be a positive number)");
 //        the text version of the price
         String priceInputString = sc.nextLine();
 //        convert the text version of the price into a numeric (double) variable
