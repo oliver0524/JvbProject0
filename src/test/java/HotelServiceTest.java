@@ -46,7 +46,7 @@ public class HotelServiceTest {
         }
     }
 
-    /** When price 0 or less is provided or name or features are empty, the Hotel Info Exception should be thrown.*/
+    /** When price 0 or less is provided, the Hotel Info Exception should be thrown.*/
     @Test
     public void addHotelInvalidPrice() {
         String name = "hotel";
@@ -108,4 +108,16 @@ public class HotelServiceTest {
                 Main.log.info("Caught CLIException: " + e2.getMessage());
             }
         }
+
+    /** Test if appropriate messaging is displayed when invalid hotel name is requested through the search function.*/
+    @Test
+    public void testGetHotelByNameWhenNotFound() {
+        // Arrange
+        String hotel1 = "hotel1";
+        String hotel2 = "hotel2";
+
+        // if no errors are produced on the non-existent hotel, the Assert.fail method is called
+        HotelInfo result = hotelService.getHotelByName("hotel3");
+        Assert.assertNull(result);
+    }
     }

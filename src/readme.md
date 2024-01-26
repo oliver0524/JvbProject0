@@ -11,9 +11,15 @@
   - **Exit** (exit from the application)
 
 # JUnit
- - Several testing scenarios are set up to test the app functionality:
+ - JUnit test can be executed by running the HotelServiceTest.java class
+ - Several testing scenarios are set up to test the app functionality :
    - Verify that hotel service is empty when first created
    - The happy path (Test if the "happy path" is working and not throwing exceptions)
+   - Verify that an Exception is thrown when hotel name is empty
+   - Verify that an Exception is thrown when hotel features are empty
+   - Verify that an Exception is thrown when hotel price =< than 0
+   - Verify that an Exception is thrown if an invalid action command is provided
+   - Verify than an appropriate messaging is displayed when invalid hotel name is requested through the search function
 
 # Logging
 - Results of the main actions are logged in the logfile.log with the append flag turned on.

@@ -8,11 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
-/**
- * What is the common aspect to all layers of the application? It need to keep track of
- * some entity called a "recipe". That entity will be modelled by Objects, which are
- * built off the "Recipe" class.
- */
+/** The main class.  Only basic functionality of the application is here */
 public class Main {
 
     public static Logger log = LoggerFactory.getLogger(Main.class);
