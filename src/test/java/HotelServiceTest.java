@@ -14,15 +14,13 @@ public class HotelServiceTest {
 
     HotelService hotelService;
 
-    /**
-     * Instantiate an object before each test
-     */
+    /** Instantiate an object before each test */
     @Before
     public void setUp() {
         hotelService = new HotelService();
     }
 
-    /** When the hotel service is first created, it should be empty.*/
+    /** Verify that when the hotel service is first created, it is empty.*/
     @Test
     public void recipeServiceEmptyAtStart() {
         List<HotelInfo> hotelinfo = hotelService.getAllHotels();
@@ -116,7 +114,7 @@ public class HotelServiceTest {
         String hotel1 = "hotel1";
         String hotel2 = "hotel2";
 
-        // if no errors are produced on the non-existent hotel, the Assert.fail method is called
+        // if no errors are produced when the non-existent hotel is search, the Assert.fail method is called
         HotelInfo result = hotelService.getHotelByName("hotel3");
         Assert.assertNull(result);
     }

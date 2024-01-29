@@ -21,7 +21,7 @@ public class Main {
 
         // Read the input values; throw an exception if the action values are not in the list of acceptable values
         while(true){
-            System.out.println("Enter your next action: add | view | search | delete | exit");
+            System.out.println("===== Enter your next action: add | view | search | delete | exit");
             String input = sc.nextLine();
             try {
 //                Throw exceptions for unexpected behavior: bad action values, unacceptable values.

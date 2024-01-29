@@ -1,5 +1,6 @@
 package org.example.Model;
 
+/** Class HotelInfo */
 public class HotelInfo {
     private String name;
     private String features;
@@ -12,6 +13,7 @@ public class HotelInfo {
         this.price = price;
     }
 
+    /** Setters and getters for the HotelInfo class variables. No usage annotations are ok */
     public String getName() {
         return name;
     }
@@ -36,6 +38,7 @@ public class HotelInfo {
        this.price = price;
     }
 
+    /** This code is used to convert HotelInfo objects into displayable format */
     @Override
     public String toString() {
         return "\nHotel " + name + " info: " +

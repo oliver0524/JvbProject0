@@ -1,5 +1,5 @@
-# This application is called the Hotel Service and designed for collecting hotel information such as 
-# hotel name, hotel features and price per night.
+# This application is called Hotel Service and designed for collecting hotel information, including 
+# hotel hotel name, features and price per night.
 
 # Main functionality
 - Interacting with the application is done through the Command prompt (console). 

@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class CLIParser {
 
-    // HotelService scoped for the entire class (address is established for the HotelService)
+    /** HotelService scoped for the entire class (address is established for the HotelService)
+     *  Methods from the HotelService class would be called here */
     HotelService hotelService;
-
 
     public CLIParser() {
         //constructor
@@ -20,7 +20,7 @@ public class CLIParser {
     }
 
     /** Check if a valid command (out of the presented choices) is entered in the console
-     * If not, throw the CLI Exception  */
+     * If not, throw the CLI Exception and HotelInfoException when appropriate */
         public String parseCommandReturnOutput(String command) throws CLIException, HotelInfoException {
         if (command.equals("add")) {
             return addAction();
@@ -38,6 +38,10 @@ public class CLIParser {
         }
     }
 
+    /** Handles console interactions for the 'add' action. Calls the addHotel method
+     * from the HotelService class. Also calls the toString method from the HotelInfo class.
+     * This method accepts variables for a HotelInfo object from the console and throws exceptions
+     * when input values do not pass validations */
     public String addAction() throws HotelInfoException {
         Scanner sc = new Scanner(System.in);
         System.out.println("* Input a hotel name");
@@ -51,15 +55,18 @@ public class CLIParser {
         double hotelPrice = Double.parseDouble(priceInputString);
 
         hotelService.addHotel(hotelName, hotelFeatures, hotelPrice);
-        return "+++ Hotel info for " + hotelName + " has been added +++";
+        return "+++ Info for the " + hotelName + " hotel has been added +++";
     }
 
-    // View all objects in the Hotel array
+    /** Handles console interactions for the 'view' action. Calls the getAllHotels method
+     * from the HotelService class. Also class the toString method from the HotelInfo class  */
     public String viewAction() {
         List<HotelInfo> hotelinfo = hotelService.getAllHotels();
         return "<<< Here are your hotel entries: " + hotelinfo.toString();
     }
 
+    /** Handles console interactions for the 'search' action. Calls the getHotelByName method
+     // from the HotelService class. */
     // Search for a particular hotel in the Hotel array
     public String searchAction() {
         Scanner sc = new Scanner(System.in);
@@ -71,10 +78,10 @@ public class CLIParser {
         } else {
             return "@@@ Here is the matching hotel: " + matchingHotel.toString();
         }
-
     }
 
-    // Delete a particular hotel in the Hotel array
+    /** Handles console interactions for the 'delete' action. Calls the getAllHotels method
+    // from the HotelService class. */
     public String deleteAction() {
         Scanner sc = new Scanner(System.in);
         List<HotelInfo> hotelinfo = hotelService.getAllHotels();
