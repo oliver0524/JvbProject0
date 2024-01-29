@@ -22,15 +22,17 @@ public class CLIParser {
     /** Check if a valid command (out of the presented choices) is entered in the console
      * If not, throw the CLI Exception and HotelInfoException when appropriate */
         public String parseCommandReturnOutput(String command) throws CLIException, HotelInfoException {
-        if (command.equals("add")) {
+        if (command.equals("A")) {
             return addAction();
-        } else if (command.equals("view")) {
+        } else if (command.equals("V")) {
             return viewAction();
-        } else if (command.equals("search")) {
-            return searchAction();
-        } else if (command.equals("delete")) {
+        } else if (command.equals("SN")) {
+            return searchActionByName();
+        } else if (command.equals("SF")) {
+            return searchActionByFeature();
+        } else if (command.equals("D")) {
             return deleteAction();
-        } else if (command.equals("exit")) {
+        } else if (command.equals("E")) {
             System.exit(0);
             return "exit";
         } else {
@@ -65,10 +67,10 @@ public class CLIParser {
         return "<<< Here are your hotel entries: " + hotelinfo.toString();
     }
 
-    /** Handles console interactions for the 'search' action. Calls the getHotelByName method
+    /** Handles console interactions for the 'search by hotel name' action. Calls the getHotelByName method
      // from the HotelService class. */
     // Search for a particular hotel in the Hotel array
-    public String searchAction() {
+    public String searchActionByName() {
         Scanner sc = new Scanner(System.in);
         String hotelName = sc.nextLine();
         HotelInfo matchingHotel = hotelService.getHotelByName(hotelName);
@@ -77,6 +79,23 @@ public class CLIParser {
             return "There was no matching hotel found.";
         } else {
             return "@@@ Here is the matching hotel: " + matchingHotel.toString();
+        }
+    }
+
+    /** Handles console interactions for the 'search by feature' action. Calls the getHotelByFeatures method
+     // from the HotelService class. */
+    // Search for a particular hotel in the Hotel array
+    public String searchActionByFeature() {
+        Scanner sc = new Scanner(System.in);
+        String hotelFeature = sc.nextLine();
+        List<HotelInfo> matchingHotels = hotelService.getHotelByFeatures(hotelFeature);
+
+        if (matchingHotels == null || matchingHotels.isEmpty()) {
+            return "There was no matching hotel feature found";
+        } else {
+            StringBuilder result = new StringBuilder();
+            result.append ("@@@ Here is a list of hotels with the "+hotelFeature+ " feature: " + matchingHotels.toString());
+            return result.toString();
         }
     }
 

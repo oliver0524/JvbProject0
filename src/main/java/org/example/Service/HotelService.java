@@ -5,6 +5,7 @@ import org.example.Main;
 import org.example.Model.HotelInfo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /** Class HotelService handles the application functionality
@@ -62,20 +63,22 @@ public class HotelService {
      * through each array entry until the match is found.
      * Store all the hotels with the matched feature in an array (type ArrayList)
      * If the match is found, return the array (hotels) that have the Searched feature   */
-    public HotelInfo getHotelByFeatures(String feature){
+    public List<HotelInfo>  getHotelByFeatures(String feature){
 
         List<HotelInfo> matchingHotels = new ArrayList<>();
 
         for(int i = 0; i < hotelinfo.size(); i++){
             HotelInfo currentFeature = hotelinfo.get(i);
-            if(currentFeature.getFeatures().contains(feature)){
+            String[] featuresArray = currentFeature.getFeatures().split("[, ]");
+
+            if(Arrays.asList(featuresArray).contains(feature)){
                 Main.log.info("SEARCH: Successful search for a feature: "+feature);
                 matchingHotels.add(currentFeature);
             } else {
                 Main.log.warn("SEARCH: Unsuccessful search for a feature: "+feature);
             }
         }
-        return matchingHotels.isEmpty() ? null : matchingHotels;
+        return matchingHotels;
     }
 
     /** This method handles the 'delete' action. Iterate through each array entry
