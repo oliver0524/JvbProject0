@@ -78,7 +78,7 @@ public class HotelServiceTest {
 
     /** When hotel features are empty, the Hotel Info Exception should be thrown.*/
     @Test
-    public void addHotelInvalidFeatures() {
+    public void addHotelEmptyFeatures() {
         String name = "name";
         String features = "";
         double price = 2.0;
@@ -114,8 +114,24 @@ public class HotelServiceTest {
         String hotel1 = "hotel1";
         String hotel2 = "hotel2";
 
-        // if no errors are produced when the non-existent hotel is search, the Assert.fail method is called
+        // if no errors are produced when the non-existent hotel is searched, the Assert.fail method is called
         HotelInfo result = hotelService.getHotelByName("hotel3");
         Assert.assertNull(result);
+    }
+
+    /** Test if appropriate messaging is displayed when a multiple word search by feature is provided */
+    @Test
+    public void testGetHotelByMultiWordFeature() {
+        // Arrange
+        String feature = "two words";
+
+        try {
+        // if no errors are produced when a multi-word feature is provided, the Assert.fail method is called
+        hotelService.getHotelByFeatures(feature);
+        Assert.fail("The Exception is not thrown when a multi-word feature is provided");
+        } catch (HotelInfoException e3) {
+            // Log the exception details
+            Main.log.info("Caught HotelInfoException for a multi-word feature: " + e3.getMessage());
+        }
     }
     }

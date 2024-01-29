@@ -63,7 +63,12 @@ public class HotelService {
      * through each array entry until the match is found.
      * Store all the hotels with the matched feature in an array (type ArrayList)
      * If the match is found, return the array (hotels) that have the Searched feature   */
-    public List<HotelInfo>  getHotelByFeatures(String feature){
+    public List<HotelInfo> getHotelByFeatures(String feature) throws HotelInfoException {
+        // Check if the feature is a single word
+        if (feature.contains(" ")) {
+            Main.log.warn("SEARCH: Invalid input. Feature should be a single word: "+feature);
+            throw new HotelInfoException("Feature should be a single word");
+        }
 
         List<HotelInfo> matchingHotels = new ArrayList<>();
 

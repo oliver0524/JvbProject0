@@ -452,3 +452,51 @@ INFO	2024-01-29 15:40:36,571	29	org.example.Main	[main]	Caught HotelInfoExceptio
 INFO	2024-01-29 15:40:36,572	30	org.example.Main	[main]	ADD: Attempting to add a hotel., features, 1.0
 WARN	2024-01-29 15:40:36,572	30	org.example.Main	[main]	ADD: Hotel name is missing: 
 INFO	2024-01-29 15:40:36,572	30	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank
+INFO	2024-01-29 16:25:03,707	0	org.example.Main	[main]	Caught CLIException: not a valid command
+INFO	2024-01-29 16:25:03,727	20	org.example.Main	[main]	ADD: Attempting to add a hotel.hotel, features, 0.0
+WARN	2024-01-29 16:25:03,728	21	org.example.Main	[main]	ADD: Price cannnot be 0 or less: 0.0
+INFO	2024-01-29 16:25:03,729	22	org.example.Main	[main]	Caught HotelInfoException: Invalid price: 0 or less
+INFO	2024-01-29 16:25:03,732	25	org.example.Main	[main]	ADD: Attempting to add a hotel.name, features, 1.0
+INFO	2024-01-29 16:25:03,746	39	org.example.Main	[main]	ADD: Attempting to add a hotel.name, , 2.0
+WARN	2024-01-29 16:25:03,747	40	org.example.Main	[main]	ADD: No features are provided: 
+INFO	2024-01-29 16:25:03,747	40	org.example.Main	[main]	Caught HotelInfoException: No features provided
+INFO	2024-01-29 16:25:03,748	41	org.example.Main	[main]	VIEW: List of all hotels in the collection: []
+INFO	2024-01-29 16:25:03,748	41	org.example.Main	[main]	ADD: Attempting to add a hotel., features, 1.0
+WARN	2024-01-29 16:25:03,748	41	org.example.Main	[main]	ADD: Hotel name is missing: 
+INFO	2024-01-29 16:25:03,748	41	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank
+INFO	2024-01-29 16:26:59,730	0	org.example.Main	[main]	ADD: Attempting to add a hotel.dolphin, indoor pool, 100.0
+INFO	2024-01-29 16:47:33,538	0	org.example.Main	[main]	ADD: Attempting to add a hotel.sg, indoor pool, 200.0
+INFO	2024-01-29 16:49:21,123	0	org.example.Main	[main]	ADD: Attempting to add a hotel.dolpin, indoor pool, 100.0
+INFO	2024-01-29 16:49:43,446	22323	org.example.Main	[main]	ADD: Attempting to add a hotel.sf, outdoor pool, 200.0
+INFO	2024-01-29 16:49:45,416	24293	org.example.Main	[main]	VIEW: List of all hotels in the collection: [
+Hotel dolpin info:  features='indoor pool' | price per night=100.0, 
+Hotel sf info:  features='outdoor pool' | price per night=200.0]
+INFO	2024-01-29 16:49:54,823	33700	org.example.Main	[main]	SEARCH: Successful search for a feature: pool
+INFO	2024-01-29 16:49:54,823	33700	org.example.Main	[main]	SEARCH: Successful search for a feature: pool
+WARN	2024-01-29 16:50:18,503	57380	org.example.Main	[main]	SEARCH: Invalid input. Feature should be a single word: outdoor pool
+INFO	2024-01-29 16:50:40,883	0	org.example.Main	[main]	Caught CLIException: not a valid command
+INFO	2024-01-29 16:50:40,895	12	org.example.Main	[main]	ADD: Attempting to add a hotel.hotel, features, 0.0
+WARN	2024-01-29 16:50:40,896	13	org.example.Main	[main]	ADD: Price cannnot be 0 or less: 0.0
+INFO	2024-01-29 16:50:40,896	13	org.example.Main	[main]	Caught HotelInfoException: Invalid price: 0 or less
+INFO	2024-01-29 16:50:40,897	14	org.example.Main	[main]	ADD: Attempting to add a hotel.name, features, 1.0
+INFO	2024-01-29 16:50:40,906	23	org.example.Main	[main]	ADD: Attempting to add a hotel.name, , 2.0
+WARN	2024-01-29 16:50:40,907	24	org.example.Main	[main]	ADD: No features are provided: 
+INFO	2024-01-29 16:50:40,907	24	org.example.Main	[main]	Caught HotelInfoException: No features provided
+INFO	2024-01-29 16:50:40,907	24	org.example.Main	[main]	VIEW: List of all hotels in the collection: []
+INFO	2024-01-29 16:50:40,908	25	org.example.Main	[main]	ADD: Attempting to add a hotel., features, 1.0
+WARN	2024-01-29 16:50:40,908	25	org.example.Main	[main]	ADD: Hotel name is missing: 
+INFO	2024-01-29 16:50:40,908	25	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank
+INFO	2024-01-29 16:51:48,941	0	org.example.Main	[main]	Caught CLIException: not a valid command
+INFO	2024-01-29 16:51:48,953	12	org.example.Main	[main]	ADD: Attempting to add a hotel.hotel, features, 0.0
+WARN	2024-01-29 16:51:48,954	13	org.example.Main	[main]	ADD: Price cannnot be 0 or less: 0.0
+INFO	2024-01-29 16:51:48,954	13	org.example.Main	[main]	Caught HotelInfoException: Invalid price: 0 or less
+INFO	2024-01-29 16:51:48,955	14	org.example.Main	[main]	ADD: Attempting to add a hotel.name, features, 1.0
+WARN	2024-01-29 16:51:48,957	16	org.example.Main	[main]	SEARCH: Invalid input. Feature should be a single word: two words
+INFO	2024-01-29 16:51:48,957	16	org.example.Main	[main]	Caught HotelInfoException for a multi-word feature: Feature should be a single word
+INFO	2024-01-29 16:51:48,957	16	org.example.Main	[main]	ADD: Attempting to add a hotel.name, , 2.0
+WARN	2024-01-29 16:51:48,958	17	org.example.Main	[main]	ADD: No features are provided: 
+INFO	2024-01-29 16:51:48,958	17	org.example.Main	[main]	Caught HotelInfoException: No features provided
+INFO	2024-01-29 16:51:48,958	17	org.example.Main	[main]	VIEW: List of all hotels in the collection: []
+INFO	2024-01-29 16:51:48,959	18	org.example.Main	[main]	ADD: Attempting to add a hotel., features, 1.0
+WARN	2024-01-29 16:51:48,959	18	org.example.Main	[main]	ADD: Hotel name is missing: 
+INFO	2024-01-29 16:51:48,959	18	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank

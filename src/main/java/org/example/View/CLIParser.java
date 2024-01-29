@@ -85,7 +85,7 @@ public class CLIParser {
     /** Handles console interactions for the 'search by feature' action. Calls the getHotelByFeatures method
      // from the HotelService class. */
     // Search for a particular hotel in the Hotel array
-    public String searchActionByFeature() {
+    public String searchActionByFeature() throws HotelInfoException {
         Scanner sc = new Scanner(System.in);
         String hotelFeature = sc.nextLine();
         List<HotelInfo> matchingHotels = hotelService.getHotelByFeatures(hotelFeature);
