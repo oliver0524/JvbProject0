@@ -45,18 +45,17 @@ public class HotelService {
     /**  This method handles the 'search' action by a hotel name. The loop iterates
      * through each array entry until the match is found.
      * If the match is found, return the hotel name   */
-    public HotelInfo getHotelByName(String name){
+    public HotelInfo getHotelByName(String name) {
 
-        for(int i = 0; i < hotelinfo.size(); i++){
+        for (int i = 0; i < hotelinfo.size(); i++) {
             HotelInfo currentHotel = hotelinfo.get(i);
-            if(currentHotel.getName().equals(name)){
-                Main.log.info("SEARCH: Successful search for a hotel: "+name);
+            if (currentHotel.getName().equals(name)) {
+                Main.log.info("SEARCH: Successful search for the hotel: " + name);
                 return currentHotel;
-            } else {
-                Main.log.warn("SEARCH: Unsuccessful search for a hotel: "+name);
             }
         }
-        return null;
+        Main.log.warn("SEARCH: Unsuccessful search for the hotel: " + name);
+        return null ;
     }
 
     /**  This method handles the 'search' action by a hotel feature. The loop iterates
@@ -77,10 +76,10 @@ public class HotelService {
             String[] featuresArray = currentFeature.getFeatures().split("[, ]");
 
             if(Arrays.asList(featuresArray).contains(feature)){
-                Main.log.info("SEARCH: Successful search for a feature: "+feature);
+                Main.log.info("SEARCH: Successful search for the feature: "+feature);
                 matchingHotels.add(currentFeature);
             } else {
-                Main.log.warn("SEARCH: Unsuccessful search for a feature: "+feature);
+                Main.log.warn("SEARCH: Unsuccessful search for the feature: "+feature);
             }
         }
         return matchingHotels;

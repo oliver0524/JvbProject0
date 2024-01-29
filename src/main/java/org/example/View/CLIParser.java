@@ -76,7 +76,7 @@ public class CLIParser {
         HotelInfo matchingHotel = hotelService.getHotelByName(hotelName);
 
         if (matchingHotel == null) {
-            return "There was no matching hotel found.";
+            return "There was no matching hotel found";
         } else {
             return "@@@ Here is the matching hotel: " + matchingHotel.toString();
         }
