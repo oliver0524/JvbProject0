@@ -22,7 +22,7 @@ public class HotelInfo {
         this.name = name;
     }
 
-    public String getfeatures() {
+    public String getFeatures() {
         return features;
     }
 

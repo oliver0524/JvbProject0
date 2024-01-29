@@ -41,7 +41,7 @@ public class HotelService {
         return hotelinfo;
     }
 
-    /**  This method handles the 'search' action. The loop iterates
+    /**  This method handles the 'search' action by a hotel name. The loop iterates
      * through each array entry until the match is found.
      * If the match is found, return the hotel name   */
     public HotelInfo getHotelByName(String name){
@@ -49,13 +49,33 @@ public class HotelService {
         for(int i = 0; i < hotelinfo.size(); i++){
             HotelInfo currentHotel = hotelinfo.get(i);
             if(currentHotel.getName().equals(name)){
-                Main.log.info("SEARCH: Successful search for hotel: "+name);
+                Main.log.info("SEARCH: Successful search for a hotel: "+name);
                 return currentHotel;
             } else {
-                Main.log.warn("SEARCH: Unsuccessful search for hotel: "+name);
+                Main.log.warn("SEARCH: Unsuccessful search for a hotel: "+name);
             }
         }
         return null;
+    }
+
+    /**  This method handles the 'search' action by a hotel feature. The loop iterates
+     * through each array entry until the match is found.
+     * Store all the hotels with the matched feature in an array (type ArrayList)
+     * If the match is found, return the array (hotels) that have the Searched feature   */
+    public HotelInfo getHotelByFeatures(String feature){
+
+        List<HotelInfo> matchingHotels = new ArrayList<>();
+
+        for(int i = 0; i < hotelinfo.size(); i++){
+            HotelInfo currentFeature = hotelinfo.get(i);
+            if(currentFeature.getFeatures().contains(feature)){
+                Main.log.info("SEARCH: Successful search for a feature: "+feature);
+                matchingHotels.add(currentFeature);
+            } else {
+                Main.log.warn("SEARCH: Unsuccessful search for a feature: "+feature);
+            }
+        }
+        return matchingHotels.isEmpty() ? null : matchingHotels;
     }
 
     /** This method handles the 'delete' action. Iterate through each array entry
