@@ -500,3 +500,6 @@ INFO	2024-01-29 16:51:48,958	17	org.example.Main	[main]	VIEW: List of all hotels
 INFO	2024-01-29 16:51:48,959	18	org.example.Main	[main]	ADD: Attempting to add a hotel., features, 1.0
 WARN	2024-01-29 16:51:48,959	18	org.example.Main	[main]	ADD: Hotel name is missing: 
 INFO	2024-01-29 16:51:48,959	18	org.example.Main	[main]	Caught HotelInfoException: Hotel name is blank
+INFO	2024-02-05 14:46:56,703	0	org.example.Main	[main]	ADD: Attempting to add a Product.staples, metal, 2.0
+INFO	2024-02-05 14:47:01,942	5239	org.example.Main	[main]	VIEW: List of all Products in the collection: [
+Product staples info:  features='metal' | price per night=2.0]
